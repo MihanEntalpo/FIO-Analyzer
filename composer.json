@@ -15,5 +15,11 @@
     "require": {
         "php": "^5.3.5 || ^7.0",
         "mihanentalpo/fast-fuzzy-search": "*"
+    },
+    "autoload": {
+        "psr-4":{
+            "Mihanentalpo\\FioAnalyzer\\": "src/"
+        }
     }
+
 }
