@@ -133,14 +133,11 @@ class FioAnalyzer
 			$p = trim( $p );
 			if ( strlen( $p ) >= 2 )
 			{
-				//echo $p . "/" . count($parts) . "\n";
-                
-                $found[0] = $this->searchIn( "first_names", $p, $min, $max, $edge );
-				$found[1] = $this->searchIn( "last_names", $p, $min, $max, $edge );
-				$found[2] = $this->searchIn( "second_names", $p, $min, $max, $edge );
-
-				//print_r($found[0]);
-
+				foreach(array("first_names", "last_names", "second_names") as $i => $dictionaryName)
+                {
+                    $found[$i] = $this->searchIn( $dictionaryName, $p, $min, $max, $edge );
+                }
+				
 				$partsFound[$key] = $found;
 
 			}
@@ -185,11 +182,7 @@ class FioAnalyzer
 		{
 			if ( $v > 0 && $partsFound[$k][$v - 1]['percent'] > 0 )
 			{
-                if (!isset($partsFound[$k][$v - 1]['value']))
-                {
-                    $partsFound[$k][$v - 1]['value'] = 0;
-                }
-				$result[$typeNames[$v - 1]] = array('src'=>$parts[$k],'found'=>$partsFound[$k][$v - 1]['value'],'percent'=>$partsFound[$k][$v - 1]['percent']);
+				$result[$typeNames[$v - 1]] = array('src'=>$parts[$k],'found'=>$partsFound[$k][$v - 1]['word'],'percent'=>$partsFound[$k][$v - 1]['percent']);
 			}
 		}
 

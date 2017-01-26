@@ -9,7 +9,7 @@ echo "Time for FioAnalyzer initialization: " . $t . "\n";
 
 
 echo "Анализ строки на наличие ФИО:\n";
-print_r($fa->break_apart("Главный инженер Иванов Иван Иванович"));
+print_r($fa->break_apart("Главный инженер Иванов Иван Ивановвич"));
 
 $ffs = new \Mihanentalpo\FastFuzzySearch\FastFuzzySearch();
 
