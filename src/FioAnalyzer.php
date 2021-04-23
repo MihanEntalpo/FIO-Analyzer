@@ -123,8 +123,8 @@ class FioAnalyzer
 
 		$variants = $this->getNof3combinations( count( $parts ) );
     
-        $min = 10000000;
-        $max = -10000000;
+        	$min = 10000000;
+        	$max = -10000000;
     
 		$partsFound = array();
 		foreach ( $parts as $key => $p )
@@ -135,9 +135,9 @@ class FioAnalyzer
 			{
 				//echo $p . "/" . count($parts) . "\n";
                 
-                $found[0] = $this->searchIn( "first_names", $p, $min, $max, $edge );
-				$found[1] = $this->searchIn( "last_names", $p, $min, $max, $edge );
-				$found[2] = $this->searchIn( "second_names", $p, $min, $max, $edge );
+                		$found[0] = $this->searchIn( "first_names", $p, $min, $max, $edge );
+				$found[1] = $this->searchIn( "second_names", $p, $min, $max, $edge );
+				$found[2] = $this->searchIn( "last_names", $p, $min, $max, $edge );
 
 				//print_r($found[0]);
 
