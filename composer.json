@@ -13,8 +13,9 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^5.3.5 || ^7.0",
-        "mihanentalpo/fast-fuzzy-search": "*"
+        "php": "^7.4 || ^8.0",
+        "mihanentalpo/fast-fuzzy-search": "*",
+        "ext-mbstring": "*"
     },
     "autoload": {
         "psr-4":{
