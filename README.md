@@ -1,4 +1,7 @@
 # FIO-Analyzer
+
+Это клон проекта "mihanentalpo/fio-analyzer" с доработками и оптимизациями для PHP 8.
+
 Анализатор строк, содержащих фамилию, имя, отчество
 
 Подробная статья: https://mihanentalpo.me/2017/03/как-разбить-фио-на-имя-фамилию-отчеств/
@@ -10,7 +13,7 @@
 ```json
 {
     "require": {
-        "mihanentalpo/fio-analyzer": "*"
+        "ekhlakov/fio-analyzer": "*"
     }
 }
 ```
@@ -31,7 +34,7 @@ require_once("./vendor/autoload.php");
 ```php
 <?php
 require_once("./vendor/autoload.php");
-$fa = new \Mihanentalpo\FioAnalyzer\FioAnalyzer();
+$fa = new \Ekhlakov\FioAnalyzer\FioAnalyzer();
 $names = $fa->break_apart("Иваанов иван Ыванович");
 print_r($names);
 ```

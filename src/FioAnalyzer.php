@@ -4,15 +4,16 @@
  * Компонент анализа ФИО.
  * Позволяет определить фамилию, имя, отчества из набора слов
  *
- * Для своей работы требует пакета из composer mihanentalpo/fast-fuzzy-search
+ * Для своей работы требует пакета из composer ekhlakov/fast-fuzzy-search
+ * (это клон пакета mihanentalpo/fast-fuzzy-search с доработками для PHP 8)
  * запускаем ./composer.phar install
  */
 
 declare(strict_types=1);
 
-namespace Mihanentalpo\FioAnalyzer;
+namespace Ekhlakov\FioAnalyzer;
 
-use Mihanentalpo\FastFuzzySearch\FastFuzzySearch;
+use Ekhlakov\FastFuzzySearch\FastFuzzySearch;
 
 class FioAnalyzer
 {
@@ -29,8 +30,10 @@ class FioAnalyzer
 
     /**
      * @var string[] Массив отчеств
-     */ 
+     */
+
     public array $second_names = [];
+
     /**
      * @var string[] Массив фамилий
      */ 
@@ -63,7 +66,7 @@ class FioAnalyzer
     }
 
     /**
-     * @param value-of<\Mihanentalpo\FioAnalyzer\FioAnalyzer::FIO_PART_FILE_TYPE> $type
+     * @param value-of<\Ekhlakov\FioAnalyzer\FioAnalyzer::FIO_PART_FILE_TYPE> $type
      * @param string                                                    $filename
      */
     protected function load_dictionary(string $type, string $filename): void

@@ -1,6 +1,9 @@
 <?php
-require_once("./vendor/autoload.php");
-$ffs = new \Mihanentalpo\FastFuzzySearch\FastFuzzySearch(array(
+
+declare(strict_types=1);
+
+require_once('./vendor/autoload.php');
+$ffs = new \Ekhlakov\FastFuzzySearch\FastFuzzySearch([
 	 'Abbott', 'Abe', 'Addison', 'Adrian', 'Aiken', 'Ainsley', 'Al', 'Alan', 
     'Alaric', 'Alban', 'Albert', 'Albion', 'Aldrich', 'Alec', 'Alex', 'Alexander', 
     'Alexis', 'Alf', 'Alfie', 'Alfred', 'Alger', 'Algernon', 'Alick', 'Allan', 
@@ -17,14 +20,12 @@ $ffs = new \Mihanentalpo\FastFuzzySearch\FastFuzzySearch(array(
     'Chuck', 'Clarence', 'Claude', 'Clay', 'Clayton', 'Clement', 'Cliff', 'Clifford', 
     'Clifton', 'Clive', 'Clyde', 'Cole', 'Coleman', 'Colin', 'Conrad', 'Constant', 
     'Conway', 'Corwin', 'Courtney', 'Craig', 'Crispin', 'Crosby', 'Curtis', 'Cuthbert', 'Cyril'
-));
+]);
 
-
-$input = "charter";
+$input = 'charter';
 
 //Lets get three most similiar english names:
 $results = $ffs->find($input, 3);
 
 //End output it:
 print_r($results);
-
