@@ -14,7 +14,7 @@
     "license": "MIT",
     "require": {
         "php": ">=8",
-        "ekhlakov/fast-fuzzy-search": "*",
+        "mihanentalpo/fast-fuzzy-search": "*",
         "ext-mbstring": "*"
     },
     "autoload": {
