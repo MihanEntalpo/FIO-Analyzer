@@ -1,5 +1,5 @@
 {
-    "name": "ekhlakov/fio-analyzer",
+    "name": "mihanentalpo/fio-analyzer",
     "type": "library",
     "description": "This is clone of mihanentalpo/fio-analyzer with updates for PHP 8. Analyze user input string, and split it into Russian first name, second name and last name",
     "keywords": ["analyze", "names", "russian", "split"],
@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4":{
-            "Ekhlakov\\FioAnalyzer\\": "src/"
+            "Mihanentalpo\\FioAnalyzer\\": "src/"
         }
     }
 

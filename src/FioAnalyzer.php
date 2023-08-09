@@ -11,9 +11,9 @@
 
 declare(strict_types=1);
 
-namespace Ekhlakov\FioAnalyzer;
+namespace Mihanentalpo\FioAnalyzer;
 
-use Ekhlakov\FastFuzzySearch\FastFuzzySearch;
+use Mihanentalpo\FastFuzzySearch\FastFuzzySearch;
 
 class FioAnalyzer
 {
@@ -66,7 +66,7 @@ class FioAnalyzer
     }
 
     /**
-     * @param value-of<\Ekhlakov\FioAnalyzer\FioAnalyzer::FIO_PART_FILE_TYPE> $type
+     * @param value-of<\Mihanentalpo\FioAnalyzer\FioAnalyzer::FIO_PART_FILE_TYPE> $type
      * @param string                                                    $filename
      */
     protected function load_dictionary(string $type, string $filename): void

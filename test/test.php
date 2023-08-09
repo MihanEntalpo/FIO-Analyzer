@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 require_once('./vendor/autoload.php');
-$ffs = new \Ekhlakov\FastFuzzySearch\FastFuzzySearch([
+$ffs = new \Mihanentalpo\FastFuzzySearch\FastFuzzySearch([
 	 'Abbott', 'Abe', 'Addison', 'Adrian', 'Aiken', 'Ainsley', 'Al', 'Alan', 
     'Alaric', 'Alban', 'Albert', 'Albion', 'Aldrich', 'Alec', 'Alex', 'Alexander', 
     'Alexis', 'Alf', 'Alfie', 'Alfred', 'Alger', 'Algernon', 'Alick', 'Allan', 
