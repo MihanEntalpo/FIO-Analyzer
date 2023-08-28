@@ -25,7 +25,7 @@ class FioAnalyzer
 
     /**
      * @var string[] Массив имён
-     */ 
+     */
     public array $first_names = [];
 
     /**
@@ -36,22 +36,22 @@ class FioAnalyzer
 
     /**
      * @var string[] Массив фамилий
-     */ 
+     */
     public array $last_names = [];
 
     /**
      * @var FastFuzzySearch|null Объект быстрого поиска для имён
-     */     
+     */
     public ?FastFuzzySearch $first_names_ffs = null;
 
     /**
      * @var FastFuzzySearch|null Объект быстрого поиска для отчеств
-     */     
+     */
     public ?FastFuzzySearch $second_names_ffs = null;
 
     /**
      * @var FastFuzzySearch|null Объект быстрого поиска для фамилий
-     */     
+     */
     public ?FastFuzzySearch $last_names_ffs = null;
 
     /**
@@ -62,7 +62,7 @@ class FioAnalyzer
         foreach (self::FIO_PART_FILE_TYPE as $n) {
             $this->{$n} = require __DIR__ . '/' . $n . '.php';
             $this->load_dictionary($n, __DIR__ . '/' . $n . '.php');
-        }        
+        }
     }
 
     /**
@@ -150,7 +150,7 @@ class FioAnalyzer
         foreach ($parts as $key => $p) {
             $found = [];
             $p = trim($p);
-            if (strlen($p) >= 2) {
+            if (mb_strlen($p) >= 2) {
                 $found[0] = $this->searchIn('first_names', $p, $min, $max, $edge);
                 $found[1] = $this->searchIn('second_names', $p, $min, $max, $edge);
                 $found[2] = $this->searchIn('last_names', $p, $min, $max, $edge);
@@ -306,7 +306,7 @@ class FioAnalyzer
                             break;
                         }
                         $num++;
-                    }                    
+                    }
                     $result[] = $arr;
                     unset( $arr );
                 }
