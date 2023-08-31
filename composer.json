@@ -1,7 +1,7 @@
 {
     "name": "mihanentalpo/fio-analyzer",
     "type": "library",
-    "description": "Analyze user input string, and split it into Russian first name, second name and last name",
+    "description": "This is clone of mihanentalpo/fio-analyzer with updates for PHP 8. Analyze user input string, and split it into Russian first name, second name and last name",
     "keywords": ["analyze", "names", "russian", "split"],
     "authors": [
         {
@@ -13,8 +13,9 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^5.3.5 || ^7.0",
-        "mihanentalpo/fast-fuzzy-search": "*"
+        "php": ">=8",
+        "mihanentalpo/fast-fuzzy-search": "*",
+        "ext-mbstring": "*"
     },
     "autoload": {
         "psr-4":{
